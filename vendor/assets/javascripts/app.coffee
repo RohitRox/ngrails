@@ -37,6 +37,22 @@
           templateUrl: 'assets/templates/demo.html'
         }
       }
+    })
+    .state('root.posts', {
+      url: '/posts',
+      views: {
+        'container@': {
+          templateUrl: 'assets/templates/posts.html'
+        }
+      }
+    })
+    .state('root.post', {
+      url: '/post/:id',
+      views: {
+        'container@': {
+          templateUrl: 'assets/templates/post.html'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('/')

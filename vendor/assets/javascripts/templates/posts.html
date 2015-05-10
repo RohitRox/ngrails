@@ -1,9 +1,5 @@
-<!-- <h3 ng-show='!!post'>Post:</h3>
-<ul ng-repeat="p in post">
-	<li>{{p.content}} - {{p.created_at}}</li>
-</ul> -->
 
-<div class="col-md-4 col-sm-6">
+<div class="col-md-12 col-sm-12" ng-controller="postsCtrl">
   <div class="panel panel-default">
      <div class="panel-heading"><a href="#/posts" class="pull-right">View all</a> <h4>Latest Posts</h4></div>
      <div class="form-group row">
@@ -12,7 +8,7 @@
       </div>
     </div>
     <div class="panel-body">
-      <div ng-repeat="p in post | limitTo: 5 | filter:search">
+      <div ng-repeat="p in post | filter:search">
         <h3><a href="#/posts/{{p._id.$oid}}">{{ p.title }}</a></h3>
       </div>
     </div>
