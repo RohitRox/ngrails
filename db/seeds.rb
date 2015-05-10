@@ -12,3 +12,12 @@ puts "Creating seed posts ..."
   Post.create(title: Faker::Lorem.sentence.capitalize, content: Faker::Lorem.paragraph)
 end
 puts "5 new posts created."
+
+puts "Creating seed problem and answers ..."
+5.times do
+  problem = Problem.create(title: Faker::Lorem.sentence.capitalize, content: Faker::Lorem.paragraph)
+  rand(2..6).times do
+    problem.answers.create(content: Faker::Lorem.paragraph, votes: rand(2..8))
+  end
+end
+puts "5 new problems with answers."
