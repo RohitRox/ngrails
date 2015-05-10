@@ -1,4 +1,5 @@
 @app = angular.module('ngRails', [
+  'appsServices',
   'ngAnimate',
   'ui.router',
   'templates',
