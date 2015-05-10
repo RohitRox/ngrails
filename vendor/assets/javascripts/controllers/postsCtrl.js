@@ -5,11 +5,3 @@ this.app.controller('postsCtrl', [
     });
   }
 ]);
-
-this.app.directive('viewPost', function(){
-  return{
-    restrict: 'E',
-    templateUrl: 'assets/templates/viewPost.html'
-  }
-}
-)

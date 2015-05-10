@@ -4,6 +4,6 @@ appsServices.factory('Posts', ['$resource',
   function ($resource) {
     return $resource('/api/posts', {},
       {
-        getPost: { method: "GET", url: "/api/posts/:id", isArray: false }
+        getPost: { method: "GET", url: "/api/posts/:id", param: { id: '@id' }, isArray: false }
       });
 }]);

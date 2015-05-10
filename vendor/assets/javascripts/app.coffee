@@ -13,12 +13,10 @@
       abstract: true,
       views: {
         'header': {
-          templateUrl: 'assets/templates/header.html',
-          controller: 'HeaderCtrl'
+          templateUrl: 'assets/templates/header.html'
         },
         'footer':{
-          templateUrl: 'assets/templates/footer.html',
-          controller: 'FooterCtrl'
+          templateUrl: 'assets/templates/footer.html'
         }
       }
     })
@@ -47,7 +45,7 @@
       }
     })
     .state('root.post', {
-      url: '/post/:id',
+      url: '/posts/:id',
       views: {
         'container@': {
           templateUrl: 'assets/templates/post.html'
