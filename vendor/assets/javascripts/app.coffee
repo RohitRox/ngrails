@@ -1,15 +1,15 @@
 @app = angular.module('ngRails', [
   'ngAnimate',
   'ui.router',
-  'templates'
+  'templates',
+  'ngResource'
 ])
 .config([ '$stateProvider','$urlRouterProvider','$locationProvider', ($stateProvider, $urlRouterProvider, $locationProvider) ->
 
   $stateProvider
     .state('home', {
-      url: '/',
-      templateUrl: 'assets/templates/home.html',
-      controller: 'HomeCtrl'
+      url: '/home',
+      templateUrl: 'assets/templates/home.html'
     })
 
   $urlRouterProvider.otherwise('home')
