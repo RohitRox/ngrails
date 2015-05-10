@@ -1,4 +1,17 @@
-<h3 ng-show='!!post'>Post:</h3>
+<!-- <h3 ng-show='!!post'>Post:</h3>
 <ul ng-repeat="p in post">
 	<li>{{p.content}} - {{p.created_at}}</li>
-</ul>
+</ul> -->
+
+<div class="col-md-4 col-sm-6">
+  <div class="panel panel-default">
+     <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Upgrade to Bootstrap 3</h4></div>
+    <div class="panel-body">
+      <div ng-repeat="p in post">
+        <h2>{{ p.title }}</h2>
+        <p>{{p.content}} - {{p.created_at}}</p>
+        <hr>
+      </div>
+    </div>
+   </div>
+</div>

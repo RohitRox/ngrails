@@ -8,12 +8,38 @@
 .config([ '$stateProvider','$urlRouterProvider','$locationProvider', ($stateProvider, $urlRouterProvider, $locationProvider) ->
 
   $stateProvider
-    .state('home', {
-      url: '/home',
-      templateUrl: 'assets/templates/home.html'
+    .state('root',{
+      url: '',
+      abstract: true,
+      views: {
+        'header': {
+          templateUrl: 'assets/templates/header.html',
+          controller: 'HeaderCtrl'
+        },
+        'footer':{
+          templateUrl: 'assets/templates/footer.html',
+          controller: 'FooterCtrl'
+        }
+      }
     })
+    .state('root.home', {
+      url: '/',
+      views: {
+        'container@': {
+          templateUrl: 'assets/templates/home.html'
+        }
+      }
+    })
+    .state('root.demo', {
+      url: '/demo',
+      views: {
+        'container@': {
+          templateUrl: 'assets/templates/demo.html'
+        }
+      }
+    });
 
-  $urlRouterProvider.otherwise('home')
+  $urlRouterProvider.otherwise('/')
 
 ])
 
